@@ -1,0 +1,25 @@
+Load and Store data in Pig:
+
+We know underlying pig is Map Reduce and in MR we know, loading data means INPUT_DATA_FORMAT and storing data means OUTPUT_DATA_FORMAT.
+So whatever Input formats MR supports, same can be done in PIG and whatever Output formats supported by MR, same can be used for 
+storing files by PIG.
+
+Generally to load any file in PIG we use STORAGE TYPE like
+
+BinStorage - Loads and stores data in machine-readable format.
+PigStorage - Loads and stores data in UTF-8 format. 
+PigDump - Stores data in UTF-8 format
+TextLoader - Loads unstructured data in UTF-8 format, TextLoader cannot be used to store data.
+These are out of the box provided Load/Storage types, we have many more Storer and Loaders in Pig like
+1. CommonLogLoader()
+2. CSVExcelStorage()
+3. FixedWidthLoader()
+4. JsonLoader()
+5. BSONLoader()
+6. MongoLoader()
+7. DBStorage()
+Here I am going to discuss 4 Storage:
+1. PigStorage
+2. TextLoader
+3. CSVExcelStorage
+4. JsonLoader
